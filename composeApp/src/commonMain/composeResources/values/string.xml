@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BBall</string>
+    <string name="label_logout">Déconnexion</string>
+</resources>
