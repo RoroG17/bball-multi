@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 
 val AppColorScheme = lightColorScheme(
     primary = Primary,
+    onPrimary = TextColor
 )
 
 

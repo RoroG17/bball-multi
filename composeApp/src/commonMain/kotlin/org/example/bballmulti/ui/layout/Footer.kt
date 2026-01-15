@@ -6,7 +6,6 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import bball_app_multi.composeapp.generated.resources.Res
 import bball_app_multi.composeapp.generated.resources.ic_calendar
 import bball_app_multi.composeapp.generated.resources.ic_home
@@ -15,8 +14,6 @@ import org.jetbrains.compose.resources.DrawableResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import org.example.bballmulti.ui.theme.Primary
-import org.example.bballmulti.ui.theme.TextColor
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -53,13 +50,13 @@ fun BottomNavBar(navController: NavHostController) {
                     Icon(
                         painter = painterResource(item.icon),
                         contentDescription = item.label,
-                        tint = Color.White
+                        tint = MaterialTheme.colorScheme.onPrimary
                     )
                 },
                 label = {
                     Text(
                         text = item.label,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.onPrimary
                     )
                 }
             )
