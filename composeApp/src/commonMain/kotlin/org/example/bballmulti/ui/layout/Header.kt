@@ -1,5 +1,6 @@
 package org.example.bballmulti.ui.layout
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -21,8 +22,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import bball_app_multi.composeapp.generated.resources.Res
 import bball_app_multi.composeapp.generated.resources.app_name
+import bball_app_multi.composeapp.generated.resources.ic_title
 import bball_app_multi.composeapp.generated.resources.label_logout
 import org.example.bballmulti.ui.theme.TextColor
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -39,10 +42,10 @@ fun AppTopBar(
             .padding(horizontal = 8.dp, vertical = 25.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-//            Image(
-//                painter = painterResource(Res.drawable.ic_title),
-//                contentDescription = stringResource(Res.string.app_name)
-//            )
+            Image(
+                painter = painterResource(Res.drawable.ic_title),
+                contentDescription = stringResource(Res.string.app_name)
+            )
             Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = stringResource(Res.string.app_name),
