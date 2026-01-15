@@ -11,6 +11,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,6 +23,8 @@ import androidx.compose.ui.unit.sp
 import bball_app_multi.composeapp.generated.resources.Res
 import bball_app_multi.composeapp.generated.resources.app_name
 import bball_app_multi.composeapp.generated.resources.label_logout
+import org.example.bballmulti.ui.theme.Primary
+import org.example.bballmulti.ui.theme.TextColor
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -34,7 +37,7 @@ fun AppTopBar(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
-            .background(Color.Red)
+            .background(MaterialTheme.colorScheme.primary)
             .padding(horizontal = 8.dp, vertical = 25.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -55,7 +58,7 @@ fun AppTopBar(
             Icon(
                 imageVector = Icons.Default.Logout,
                 contentDescription = stringResource(Res.string.label_logout),
-                tint = Color.White
+                tint = TextColor
             )
         }
     }
